@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С 8 Марта, любимая! ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключаем красивые шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигация (вкладки) -->
+    <nav class="tabs">
+        <div class="container">
+            <button class="tab-button active" data-tab="home">🌷 Главная</button>
+            <button class="tab-button" data-tab="gallery">📸 Наши моменты</button>
+            <button class="tab-button" data-tab="reasons">💌 25 причин</button>
+            <button class="tab-button" data-tab="letter">✉️ Письмо в будущее</button>
+        </div>
+    </nav>
+
+    <!-- Контейнер для всех вкладок -->
+    <main class="tab-content">
+        <!-- 1. ГЛАВНАЯ -->
+        <section id="home" class="tab-pane active">
+            <div class="hero">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <!-- ЗДЕСЬ ТЫ ВСТАВИШЬ ЕЕ ФОТО (портрет) -->
+                    <div class="hero-image">
+                        <img src="images/portrait.jpg" alt="[Ее имя]" id="hero-portrait">
+                    </div>
+                    <h1 class="hero-title">С 8 Марта, <span id="her-name">Любимая Яночка</span>!</h1>
+                    <p class="hero-subtitle">Для самой прекрасной девушки на свете</p>
+                    <div class="flowers">🌷🌹🌸🌼🌺</div>
+                    <div class="days-counter" id="daysCounter">Мы вместе уже 264 дней</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. ГАЛЕРЕЯ -->
+        <section id="gallery" class="tab-pane">
+            <div class="container">
+                <h2 class="section-title">Наши мгновения</h2>
+                <div class="gallery-grid">
+                    <!-- СЮДА ВСТАВИШЬ ФОТКИ. Пример: -->
+                    <div class="gallery-item">
+                        <img src="images/photo1.jpg" alt="Наше фото 1">
+                        <div class="photo-caption">Первое совместное фото 💕</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/photo2.jpg" alt="Наше фото 2">
+                        <div class="photo-caption">Вайбим</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/photo3.jpg" alt="Наше фото 2">
+                        <div class="photo-caption">Крутые</div>
+                    </div>    
+                    <div class="gallery-item">
+                        <img src="images/photo4.jpg" alt="Наше фото 2">
+                        <div class="photo-caption">Это нг наше</div>
+                    </div>          
+                    <div class="gallery-item">
+                        <img src="images/photo5.jpg" alt="Наше фото 2">
+                        <div class="photo-caption">Опять вайбим</div>
+                    </div>  
+                    <div class="gallery-item">
+                        <img src="images/photo6.jpg" alt="Наше фото 2">
+                        <div class="photo-caption">Тут тебя не видно</div>
+                    </div>    
+                    <div class="gallery-item">
+                        <img src="images/photo7.jpg" alt="Наше фото 2">
+                        <div class="photo-caption">Засматривается уже)))</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/photo8.jpg" alt="Наше фото 2">
+                        <div class="photo-caption">Мы идельно подходим</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/photo9.jpg" alt="Наше фото 2">
+                        <div class="photo-caption">Красотка-нереалка</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/photo10.jpg" alt="Наше фото 2">
+                        <div class="photo-caption">Куда лезешь?</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/photo11.jpg" alt="Наше фото 2">
+                        <div class="photo-caption">Губы даже есть</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/photo12.jpg" alt="Наше фото 2">
+                        <div class="photo-caption">Вау Вау</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 25 ПРИЧИН -->
+        <section id="reasons" class="tab-pane">
+            <div class="container">
+                <h2 class="section-title">25 причин, почему я тебя люблю</h2>
+                <div class="reasons-grid" id="reasons-list">
+                    <!-- Сюда причины добавятся через JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. ПИСЬМО В БУДУЩЕЕ -->
+        <section id="letter" class="tab-pane">
+            <div class="container">
+                <h2 class="section-title">Письмо через год</h2>
+                <div class="letter-container">
+                    <div class="letter-paper">
+                        <p class="letter-date">7 марта 2026 года</p>
+                        <div class="letter-content" id="future-letter">
+                            <!-- Текст письма появится через JS -->
+                        </div>
+                        <p class="letter-signature">Твой ЕГОР</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ИЗЮМИНКА: СЮРПРИЗ ПО КЛИКУ -->
+    <div class="surprise-box" id="surprise-trigger">
+        <span class="surprise-icon">🎁</span>
+        <span class="surprise-text">Нажми на меня</span>
+    </div>
+
+    <!-- Модальное окно для сюрприза -->
+    <div id="surprise-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Сюрприз! 🌟</h3>
+            <p id="surprise-message">Ты — самое лучшее, что случилось в моей жизни. Спасибо, что ты есть!</p>
+            <div class="surprise-hearts">❤️❤️❤️</div>
+        </div>
+    </div>
+
+    <!-- Подключаем JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Музыкальный плеер -->
+<div class="music-player" id="musicPlayer">
+    <audio id="bgMusic" loop preload="auto">
+        <source src="background.mp3" type="audio/mpeg">
+        <!-- Если хочешь добавить запасной формат -->
+        <!-- <source src="background-music.ogg" type="audio/ogg"> -->
+        Твой браузер не поддерживает аудио.
+    </audio>
+    
+    <button class="music-button" id="musicToggle">
+        <span class="music-icon">🔇</span>
+        <span class="music-text">Включить музыку</span>
+    </button>
+    
+    <!-- Ползунок громкости (по желанию) -->
+    <div class="volume-control" id="volumeControl">
+        <input type="range" min="0" max="1" step="0.1" value="0.5" id="volumeSlider">
+    </div>
+</div>
+
+<div class="petals-container" id="petalsContainer"></div>
+</body>
+</html>
